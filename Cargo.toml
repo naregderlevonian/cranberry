@@ -3,4 +3,5 @@ name = "cranberry"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+description = "Transliteration of Russian Cyrillic into Latin Script"
+license = "MIT"
