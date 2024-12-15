@@ -1,8 +1,9 @@
 mod dictionary;
 mod function;
 mod map;
-mod scheme;
 mod translate;
+
+pub mod scheme;
 
 use crate::map::Map;
 
