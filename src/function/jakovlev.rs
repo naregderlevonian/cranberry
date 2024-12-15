@@ -1,6 +1,4 @@
 use std::collections::HashMap;
-
-use crate::dictionary::check;
 use crate::dictionary;
 
 pub fn parse(data: HashMap<char, String>, current: char, prev: Option<char>, next: Option<char>) -> String {

@@ -17,8 +17,8 @@ pub fn new() -> Map {
     dictionary.insert('Й', String::from("J"));
     dictionary.insert('й', String::from("j"));
 
-    dictionary.insert('Х', String::from("X"));
-    dictionary.insert('х', String::from("x"));
+    dictionary.insert('Х', String::from("H"));
+    dictionary.insert('х', String::from("h"));
 
     dictionary.insert('Ц', String::from("C"));
     dictionary.insert('ц', String::from("c"));
@@ -29,8 +29,8 @@ pub fn new() -> Map {
     dictionary.insert('Ш', String::from("Š"));
     dictionary.insert('ш', String::from("š"));
     
-    dictionary.insert('Щ', String::from("Šč"));
-    dictionary.insert('щ', String::from("šč"));
+    dictionary.insert('Щ', String::from("Ŝ"));
+    dictionary.insert('щ', String::from("ŝ"));
     
     dictionary.insert('ъ', String::from("\""));
     dictionary.insert('Ъ', String::from("\""));
@@ -44,11 +44,11 @@ pub fn new() -> Map {
     dictionary.insert('Э', String::from("È"));
     dictionary.insert('э', String::from("è"));
 
-    dictionary.insert('Ю', String::from("Ju"));
-    dictionary.insert('ю', String::from("ju"));
+    dictionary.insert('Ю', String::from("Û"));
+    dictionary.insert('ю', String::from("û"));
     
-    dictionary.insert('Я', String::from("Ja"));
-    dictionary.insert('я', String::from("ja"));
+    dictionary.insert('Я', String::from("Â"));
+    dictionary.insert('я', String::from("â"));
 
     Map::new(dictionary, Box::new(direct::parse))
 }

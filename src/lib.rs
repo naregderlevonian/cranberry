@@ -1,7 +1,6 @@
 mod dictionary;
 mod function;
 mod map;
-mod translate;
 
 pub mod scheme;
 

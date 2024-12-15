@@ -17,8 +17,8 @@ pub fn new() -> Map {
     dictionary.insert('Й', String::from("J"));
     dictionary.insert('й', String::from("j"));
 
-    dictionary.insert('Х', String::from("X"));
-    dictionary.insert('х', String::from("x"));
+    dictionary.insert('Х', String::from("Ch"));
+    dictionary.insert('х', String::from("ch"));
 
     dictionary.insert('Ц', String::from("C"));
     dictionary.insert('ц', String::from("c"));
@@ -31,7 +31,7 @@ pub fn new() -> Map {
     
     dictionary.insert('Щ', String::from("Šč"));
     dictionary.insert('щ', String::from("šč"));
-    
+
     dictionary.insert('ъ', String::from("\""));
     dictionary.insert('Ъ', String::from("\""));
 
