@@ -16,7 +16,6 @@ impl Engine {
             Engine::Soviet1 => Scheme::create(alphabet::soviet1::get(), handle::soviet::translate),
             Engine::Soviet2 => Scheme::create(alphabet::soviet2::get(), handle::soviet::translate),
             Engine::Soviet3 => Scheme::create(alphabet::soviet3::get(), handle::soviet::translate),
-            _ => Scheme::create(alphabet::cranberry::get(), handle::cranberry::translate),
         }
     }
 }

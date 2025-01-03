@@ -1,7 +1,7 @@
 use crate::alias::Alphabet;
 use crate::alias::Latin;
 
-pub fn new() -> Alphabet {
+pub fn get() -> Alphabet {
     let mut alphabet = Alphabet::new();
 
     alphabet.insert('Е', Latin::from("Ye"));
