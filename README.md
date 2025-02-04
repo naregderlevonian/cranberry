@@ -36,7 +36,7 @@ fn main() {
 
 ## Supported Engines
 
-Currently, the library supports four transliteration engines: the Cranberry (author's engine) and three variants based on the Soviet Latin alphabet, which were proposed by Professor Yakovlev's commission during the USSR era.
+The library currently supports nine transliteration engines, including the Cranberry engine (developed by the author), three variants based on the Soviet Latin alphabet proposed by Professor Yakovlev’s commission during the USSR era, and five international standard systems compliant with ISO 9.
 
 Here is a table with all the engines and an example of the transformed pangram text. 
 
@@ -46,6 +46,11 @@ Here is a table with all the engines and an example of the transformed pangram t
 | ```cranberry::Engine::Soviet1``` | **Soviet #1** | V cascax juga ƶil by çitrus? Da, no falíşivyj ekzemplár! |
 | ```cranberry::Engine::Soviet2``` | **Soviet #2** | V cascax juga ƶil by çitrus? Da, no faljşivyj ekzemplär! |
 | ```cranberry::Engine::Soviet3``` | **Soviet #3** | V cascax juga ƶil bь çitrus? Da, no faljşivьj ekzemplər! |
+| ```cranberry::Engine::ISO1954``` | **ISO 9 1954** | V čaščah juga žil by citrus? Da, no fal'šivyj èkzempljar! |
+| ```cranberry::Engine::ISO1968Base``` | **ISO 9 1968 Base** | V čaŝah ûga žil by citrus? Da, no fal'šivyj èkzemplǎr! |
+| ```cranberry::Engine::ISO1968Alt1``` | **ISO 9 1968 Alternative #1** | V čaščach juga žil by citrus? Da, no fal'šivyj èkzempljar! |
+| ```cranberry::Engine::ISO1968Alt2``` | **ISO 9 1968 Alternative #2** | V chashchakh yuga zhil by tsitrus? Da, no fal'shivyĭ èkzemplyar! |
+| ```cranberry::Engine::ISO1995``` | **ISO 9 1995** | V čaŝah ûga žil by citrus? Da, no fal'šivyj èkzemplǎr! |
 
 ## License
 
