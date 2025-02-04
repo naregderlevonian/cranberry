@@ -8,7 +8,7 @@ You can add Cranberry to your Rust project by including the following line in yo
 
 ```toml
 [dependencies]
-cranberry = "0.3.1"
+cranberry = "0.4.0"
 ```
 
 Alternatively, you can use the command line to add it to your project:
