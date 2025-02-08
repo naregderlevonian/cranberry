@@ -1,107 +1,105 @@
 use crate::alias::Alphabet;
-use crate::alias::Latin;
+use crate::alphabetize;
 
 pub fn get() -> Alphabet {
-    let mut alphabet = Alphabet::new();
+    alphabetize! {
+        'А' => "A",
+        'а' => "a",
 
-    alphabet.insert('А', Latin::from("A"));
-    alphabet.insert('а', Latin::from("a"));
+        'Б' => "B",
+        'б' => "b",
 
-    alphabet.insert('Б', Latin::from("B"));
-    alphabet.insert('б', Latin::from("b"));
+        'В' => "V",
+        'в' => "v",
 
-    alphabet.insert('В', Latin::from("V"));
-    alphabet.insert('в', Latin::from("v"));
+        'Г' => "G",
+        'г' => "g",
 
-    alphabet.insert('Г', Latin::from("G"));
-    alphabet.insert('г', Latin::from("g"));
+        'Д' => "D",
+        'д' => "d",
 
-    alphabet.insert('Д', Latin::from("D"));
-    alphabet.insert('д', Latin::from("d"));
+        'Е' => "E",
+        'е' => "e",
 
-    alphabet.insert('Е', Latin::from("E"));
-    alphabet.insert('е', Latin::from("e"));
+        'Ё' => "Ë",
+        'ё' => "ë",
 
-    alphabet.insert('Ё', Latin::from("Ë"));
-    alphabet.insert('ё', Latin::from("ë"));
+        'Ж' => "Zh",
+        'ж' => "zh",
 
-    alphabet.insert('Ж', Latin::from("Zh"));
-    alphabet.insert('ж', Latin::from("zh"));
+        'З' => "Z",
+        'з' => "z",
 
-    alphabet.insert('З', Latin::from("Z"));
-    alphabet.insert('з', Latin::from("z"));
+        'И' => "I",
+        'и' => "i",
 
-    alphabet.insert('И', Latin::from("I"));
-    alphabet.insert('и', Latin::from("i"));
+        'Й' => "Ĭ",
+        'й' => "ĭ",
 
-    alphabet.insert('Й', Latin::from("Ĭ"));
-    alphabet.insert('й', Latin::from("ĭ"));
+        'К' => "K",
+        'к' => "k",
 
-    alphabet.insert('К', Latin::from("K"));
-    alphabet.insert('к', Latin::from("k"));
+        'Л' => "L",
+        'л' => "l",
 
-    alphabet.insert('Л', Latin::from("L"));
-    alphabet.insert('л', Latin::from("l"));
+        'М' => "M",
+        'м' => "m",
 
-    alphabet.insert('М', Latin::from("M"));
-    alphabet.insert('м', Latin::from("m"));
+        'Н' => "N",
+        'н' => "n",
 
-    alphabet.insert('Н', Latin::from("N"));
-    alphabet.insert('н', Latin::from("n"));
+        'О' => "O",
+        'о' => "o",
 
-    alphabet.insert('О', Latin::from("O"));
-    alphabet.insert('о', Latin::from("o"));
+        'П' => "P",
+        'п' => "p",
 
-    alphabet.insert('П', Latin::from("P"));
-    alphabet.insert('п', Latin::from("p"));
+        'Р' => "R",
+        'р' => "r",
 
-    alphabet.insert('Р', Latin::from("R"));
-    alphabet.insert('р', Latin::from("r"));
+        'С' => "S",
+        'с' => "s",
 
-    alphabet.insert('С', Latin::from("S"));
-    alphabet.insert('с', Latin::from("s"));
+        'Т' => "T",
+        'т' => "t",
 
-    alphabet.insert('Т', Latin::from("T"));
-    alphabet.insert('т', Latin::from("t"));
+        'У' => "U",
+        'у' => "u",
 
-    alphabet.insert('У', Latin::from("U"));
-    alphabet.insert('у', Latin::from("u"));
+        'Ф' => "F",
+        'ф' => "f",
 
-    alphabet.insert('Ф', Latin::from("F"));
-    alphabet.insert('ф', Latin::from("f"));
+        'Х' => "Kh",
+        'х' => "kh",
 
-    alphabet.insert('Х', Latin::from("Kh"));
-    alphabet.insert('х', Latin::from("kh"));
+        'Ц' => "Ts",
+        'ц' => "ts",
 
-    alphabet.insert('Ц', Latin::from("Ts"));
-    alphabet.insert('ц', Latin::from("ts"));
+        'Ч' => "Ch",
+        'ч' => "ch",
 
-    alphabet.insert('Ч', Latin::from("Ch"));
-    alphabet.insert('ч', Latin::from("ch"));
+        'Ш' => "Sh",
+        'ш' => "sh",
 
-    alphabet.insert('Ш', Latin::from("Sh"));
-    alphabet.insert('ш', Latin::from("sh"));
+        'Щ' => "Shch",
+        'щ' => "shch",
 
-    alphabet.insert('Щ', Latin::from("Shch"));
-    alphabet.insert('щ', Latin::from("shch"));
+        'Ъ' => "\"",
+        'ъ' => "\"",
 
-    alphabet.insert('Ъ', Latin::from("\""));
-    alphabet.insert('ъ', Latin::from("\""));
+        'Ы' => "Y",
+        'ы' => "y",
 
-    alphabet.insert('Ы', Latin::from("Y"));
-    alphabet.insert('ы', Latin::from("y"));
+        'Ь' => "\'",
+        'ь' => "\'",
 
-    alphabet.insert('Ь', Latin::from("\'"));
-    alphabet.insert('ь', Latin::from("\'"));
+        'Э' => "È",
+        'э' => "è",
 
-    alphabet.insert('Э', Latin::from("È"));
-    alphabet.insert('э', Latin::from("è"));
+        'Ю' => "Yu",
+        'ю' => "yu",
 
-    alphabet.insert('Ю', Latin::from("Yu"));
-    alphabet.insert('ю', Latin::from("yu"));
-
-    alphabet.insert('Я', Latin::from("Ya"));
-    alphabet.insert('я', Latin::from("ya"));
-
-    alphabet
+        'Я' => "Ya",
+        'я' => "ya",
+    }
 }

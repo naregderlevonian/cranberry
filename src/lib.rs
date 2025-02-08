@@ -1,11 +1,9 @@
 mod alias;
 mod alphabet;
-mod class;
-mod iotized;
-mod handle;
-mod scheme;
+mod engine;
+mod handler;
 
-pub enum Engine {
+pub enum Scheme {
     Cranberry,
     Soviet1,
     Soviet2,
@@ -15,20 +13,22 @@ pub enum Engine {
     ISO1968Alt1,
     ISO1968Alt2,
     ISO1995,
+    ALALC,
 }
 
-impl Engine {
-    pub fn init(&self) -> scheme::Scheme {
+impl Scheme {
+    pub fn init(&self) -> engine::Engine {
         match self {
-            Engine::Cranberry => scheme::Scheme::create(alphabet::cranberry::get(), handle::cranberry::translate),
-            Engine::Soviet1 => scheme::Scheme::create(alphabet::soviet1::get(), handle::soviet::translate),
-            Engine::Soviet2 => scheme::Scheme::create(alphabet::soviet2::get(), handle::soviet::translate),
-            Engine::Soviet3 => scheme::Scheme::create(alphabet::soviet3::get(), handle::soviet::translate),
-            Engine::ISO1954 => scheme::Scheme::create(alphabet::iso1954::get(), handle::direct::translate),
-            Engine::ISO1968Base => scheme::Scheme::create(alphabet::iso1968base::get(), handle::direct::translate),
-            Engine::ISO1968Alt1 => scheme::Scheme::create(alphabet::iso1968alt1::get(), handle::direct::translate),
-            Engine::ISO1968Alt2 => scheme::Scheme::create(alphabet::iso1968alt2::get(), handle::direct::translate),
-            Engine::ISO1995 => scheme::Scheme::create(alphabet::iso1995::get(), handle::direct::translate),
+            Scheme::Cranberry => engine::Engine::smart(alphabet::cranberry::get(), handler::cranberry::process),
+            Scheme::Soviet1 => engine::Engine::smart(alphabet::soviet1::get(), handler::soviet::process),
+            Scheme::Soviet2 => engine::Engine::smart(alphabet::soviet2::get(), handler::soviet::process),
+            Scheme::Soviet3 => engine::Engine::smart(alphabet::soviet3::get(), handler::soviet::process),
+            Scheme::ISO1954 => engine::Engine::basic(alphabet::iso1954::get()),
+            Scheme::ISO1968Base => engine::Engine::basic(alphabet::iso1968base::get()),
+            Scheme::ISO1968Alt1 => engine::Engine::basic(alphabet::iso1968alt1::get()),
+            Scheme::ISO1968Alt2 => engine::Engine::basic(alphabet::iso1968alt2::get()),
+            Scheme::ISO1995 => engine::Engine::basic(alphabet::iso1995::get()),
+            Scheme::ALALC => engine::Engine::basic(alphabet::alalc::get()),
         }
     }
 }
